@@ -16,11 +16,19 @@ namespace LineComparison
             this.y1 = y1;
             this.y2 = y2;
         }
-        public void Length()
+        public double Length()
         {
-           
+            
             double result = Math.Sqrt(Math.Pow((x2-x1), 2) + Math.Pow((y2-y1), 2));
             Console.WriteLine(result);
+            return result;
+        }
+        public void EqualityCheck(double line1, double line2) 
+        {
+            if (line1.Equals(line2))
+                Console.WriteLine("Both the lines are equal");
+            else
+                Console.WriteLine("Lines are different");
         }
     }
 }
