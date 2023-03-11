@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,16 @@ namespace LineComparison
                 Console.WriteLine("Both the lines are equal");
             else
                 Console.WriteLine("Lines are different");
+        }
+
+        public void ComparingLines(double line1, double line2)
+        {
+            if (line1.CompareTo(line2) == 0)
+                Console.WriteLine("Both the lines are equal");
+            if (line1.CompareTo(line2) > 0)
+                Console.WriteLine("Line1 is Greater than Line2");
+            else
+                Console.WriteLine("Line2 is Greater than Line1");
         }
     }
 }
